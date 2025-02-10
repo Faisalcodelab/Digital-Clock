@@ -1,0 +1,122 @@
+/* General Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', monospace;
+    color: #00ff00;
+    overflow: hidden;
+    background: black;
+    position: relative;
+}
+
+/* Title Styling */
+.title {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 100px;
+    color: #00ff00;
+    background-color: black;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #008000;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; /* Title above the canvas */
+}
+
+/* Center the Clock Box */
+.center-box-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3; /* Clock above the canvas */
+}
+
+/* Digital Clock Box Styling */
+.center-box {
+    width: 600px;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background for the clock */
+    border: 2px solid #00ff00; /* Green border for the clock */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 0 20px #00ff00; /* Green glowing border effect */
+}
+
+/* Time & Date Styling */
+#time, #date {
+    font-size: 40px; /* Bigger font size for better visibility */
+    font-weight: bold;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #008000;
+    letter-spacing: 2px; /* Added space between characters for styling */
+}
+
+/* Full Page Canvas for Matrix Effect */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Matrix canvas in the background */
+}
+
+/* Media Queries for Responsiveness */
+
+/* Mobile Devices (Portrait) */
+@media (max-width: 600px) {
+    .title {
+        font-size: 1.5rem;
+        margin-top: 50px;
+    }
+
+    .center-box {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    #time, #date {
+        font-size: 30px;
+    }
+}
+
+/* Tablet Devices (Landscape) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .title {
+        font-size: 1.8rem;
+        margin-top: 80px;
+    }
+
+    .center-box {
+        width: 80%;
+        height: auto;
+        padding: 30px;
+    }
+
+    #time, #date {
+        font-size: 35px;
+    }
+}
+
+/* Desktop Devices */
+@media (min-width: 1025px) {
+    .title {
+        font-size: 2rem;
+        margin-top: 100px;
+    }
+
+    .center-box {
+        width: 600px;
+        height: 200px;
+    }
+
+    #time, #date {
+        font-size: 40px;
+    }
+}
